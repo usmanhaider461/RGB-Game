@@ -18,7 +18,7 @@ resetButton.addEventListener("click", function () {
     // Change colorDisplay to match picked Color
     colorDisplay.textContent = pickedColor;
     // change colors of squares
-    h1.style.backgroundColor = "#232323";
+    h1.style.backgroundColor = "steelblue";
     resetButton.textContent = "New Colors";
     message.textContent = "";
 
@@ -33,6 +33,7 @@ resetButton.addEventListener("click", function () {
 easyBtn.addEventListener("click", function () {
     easyBtn.classList.add("selected");
     hardBtn.classList.remove("selected");
+    message.textContent = "";
     colors = generateRandomColors(3);
     pickedColor = pickColor();
     colorDisplay.textContent = pickedColor;
@@ -52,6 +53,7 @@ hardBtn.addEventListener("click", function () {
     hardBtn.classList.add("selected");
     colors = generateRandomColors(6);
     pickedColor = pickColor();
+    message.textContent = "";
     colorDisplay.textContent = pickedColor;
     for (var i = 0; i < squares.length; i++) {
         // add initial Colors to squares
